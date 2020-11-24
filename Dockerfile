@@ -1,5 +1,6 @@
 FROM ubuntu:20.04
 
+COPY start.sh ./
 #Actualicazion
 RUN apt update
 RUN apt upgrade -y
@@ -72,13 +73,6 @@ RUN git clone https://github.com/meetecho/janus-gateway.git \
 && ./configure --prefix=/opt/janus \
 && make \
 && make install
-
-
-
-
-
-
-
 
 
 
