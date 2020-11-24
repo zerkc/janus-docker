@@ -1,0 +1,7 @@
+build:
+  stage: build
+  image: docker:19.03.12
+  script:
+  - docker build -t zerkc/janus:latest .
+  only:
+  - master
