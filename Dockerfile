@@ -72,7 +72,12 @@ RUN git clone https://github.com/meetecho/janus-gateway.git \
 && sh autogen.sh \
 && ./configure --prefix=/opt/janus \
 && make \
-&& make install
+&& make install \
+&& make configs
+
+RUN apt install -y libusrsctp1
+
+RUN chmod +x /start.sh
 
 
 
